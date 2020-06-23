@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CarReview.Models;
+using CarReview.Repository;
+using CarReview.Views;
 
 namespace CarReview
 {
@@ -24,7 +27,7 @@ namespace CarReview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.addDbContext<CarContext>();
+            services.AddDbContext<CarContext>();
             //services.AddScoped<IRepository<CarClass>, CarRepository>();
         }
 

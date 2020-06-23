@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace CarReview.Repository
 {
-    public class IRepository
+    public interface IRepository<T> where T : class
     {
+        IEnumerable<T> GetAll();
+        T GetById(int id);
     }
 }

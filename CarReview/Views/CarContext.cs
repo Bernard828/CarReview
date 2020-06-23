@@ -14,7 +14,7 @@ namespace CarReview.Views
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=GolfCourseDatabase;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarDatabase;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
@@ -31,3 +31,4 @@ namespace CarReview.Views
                new CarModel("Little Met", 4, "Great course for beginners, not so much for the advanced player", "golfcourse5.jpg")
                );
         }
+}   }

@@ -10,23 +10,23 @@ namespace CarReview.Controllers
 {
     public class ContentController : Controller
     {
-        IRepository<Content> carRepo;
+        IRepository<Content> contentRepo;
 
-        public ContentController(IRepository<Content> carRepo)
+        public ContentController(IRepository<Content> contentRepo)
         {
-            this.carRepo = carRepo;
+            this.contentRepo = contentRepo;
         }
 
         public ViewResult Index()
         {
             //CarRepository carRepo = new CarRepository();
-            var model = carRepo.GetAll();
+            var model = contentRepo.GetAll();
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = carRepo.GetById(id);
+            var model = contentRepo.GetById(id);
             return View(model);
         }
     }

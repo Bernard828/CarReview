@@ -7,22 +7,26 @@ namespace CarReview.Models
 {
     public class Content
     {
-        public string Name { get; set; }
+        public string Title { get; set; }
         public int Id { get; set; }
-        public string Description { get; set; }
-        public string Image { get; set; }
+        public string Body { get; set; }
+        public string Author { get; set; }
+        public string Category { get; set; }
+        public DateTime PublishDate { get; set; }
 
         public Content()
         {
 
         }
 
-        public Content(string name, int id, string description, string image)
+        public Content(string title, int id, string body, string author, string category, DateTime publishDate)
         {
-            Name = name;
+            Title = title;
             Id = id;
-            Description = description;
-            Image = image;
+            Body = body;
+            Author = author;
+            Category = category;
+            PublishDate = publishDate;
         }
     }
 }

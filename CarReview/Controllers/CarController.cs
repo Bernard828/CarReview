@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CarReview.Controllers
 {
-    public class CarController : Controller
+    public class ContentController : Controller
     {
-        IRepository<CarModel> carRepo;
+        IRepository<Content> carRepo;
 
-        public CarController(IRepository<CarModel> carRepo)
+        public ContentController(IRepository<Content> carRepo)
         {
             this.carRepo = carRepo;
         }

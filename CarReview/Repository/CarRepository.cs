@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace CarReview.Repository
 {
-    public class CarRepository : IRepository<CarModel>
+    public class CarRepository : IRepository<Content>
     {
-        private CarContext db;
-        public CarRepository(CarContext db)
+        private CarBlogContext db;
+        public CarRepository(CarBlogContext db)
         {
             this.db = db;
         }
 
-        public IEnumerable<CarModel> GetAll()
+        public IEnumerable<Content> GetAll()
         {
             return db.CarList;
         }
 
-        public CarModel GetById(int id)
+        public Content GetById(int id)
         {
             return db.CarList.Single(c => c.Id == id);
         }
@@ -30,9 +30,9 @@ namespace CarReview.Repository
             return db.CarList.Count();
         }
 
-        public void Create(CarModel carModel)
+        public void Create(Content content)
         {
-            db.CarList.Add(carModel);
+            db.CarList.Add(content);
             db.SaveChanges();
         }
 }    }

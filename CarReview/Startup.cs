@@ -27,7 +27,7 @@ namespace CarReview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<CarContext>();
+            services.AddDbContext<CarBlogContext>();
             //services.AddScoped<IRepository<CarClass>, CarRepository>();
         }
 

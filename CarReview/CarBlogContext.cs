@@ -25,10 +25,10 @@ namespace CarReview.Views
         {
             modelbuilder.Entity<Content>().HasData(
 
-               new Content("Bushwood CC", 1, "Good snack shack and poor caddying", "Bushwood.jpg"),
-               new Content("Fury Creek Golf CC", 2, "Price is wrong B&$#%", "FurryCreek.jpg"),
-               new Content("Cotton Wood", 3, "Waggle and let the big dog eat", "Cottonwood.jpg"),
-               new Content("Little Met", 4, "Great course for beginners, not so much for the advanced player", "golfcourse5.jpg")
+               new Content("New Car", 1, "My new car is amazing", "Steve Jobs", "Sports Car", DateTime.Now),
+               new Content("Used Car", 2, "My used car sucks", "Elon Musk", "Electric Car", DateTime.Now),
+               new Content("Certfied Preowned", 3, "Not a good good", "Stradman", "Luxury Car", DateTime.Now),
+               new Content("Salvage Title", 4, "Great project car", "DoctaM3", "Exotic Car", DateTime.Now)
                );
         }
 }   }

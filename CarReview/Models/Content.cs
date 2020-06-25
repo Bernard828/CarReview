@@ -26,7 +26,7 @@ namespace CarReview.Models
             Body = body;
             Author = author;
             Category = category;
-            PublishDate = publishDate;
+            PublishDate = DateTime.Now;
         }
     }
 }

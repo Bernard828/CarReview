@@ -1,2 +1,14 @@
 ﻿body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aqua;
+    background-image: url(Images/golfcourse1.jpg);
+    background-size: cover;
+}
+
+#Review Section article {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
 }

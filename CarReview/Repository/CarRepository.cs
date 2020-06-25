@@ -35,4 +35,16 @@ namespace CarReview.Repository
             db.CarList.Add(content);
             db.SaveChanges();
         }
-}    }
+
+        public void Delete(Content content)
+        {
+            db.CarList.Remove(content);
+            db.SaveChanges();
+        }
+
+        public void Update(Content content)
+        {
+            db.CarList.Update(content);
+            db.SaveChanges();
+        }
+    }    }

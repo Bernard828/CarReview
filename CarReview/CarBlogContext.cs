@@ -9,8 +9,8 @@ namespace CarReview.Views
 {
     public class CarBlogContext : DbContext
     {
-        public DbSet<Content> CarList { get; set; }
-        public IEnumerable<Category> Category { get; set; }
+        public DbSet<Content> Contents { get; set; }
+        public DbSet<Category> Category { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,18 +25,21 @@ namespace CarReview.Views
         {
             modelbuilder.Entity<Content>().HasData(
 
-               new Content("New Car", 1, "My new car is amazing", "Steve Jobs", DateTime.Now),
-               new Content("Used Car", 2, "My used car sucks", "Elon Musk", DateTime.Now),
-               new Content("Certfied Preowned", 3, "Not a good good", "Stradman", DateTime.Now),
-               new Content("Salvage Title", 4, "Great project car", "DoctaM3", DateTime.Now)
+               new Content("New Car", 1, "My new car is amazing", "Steve Jobs",1),
+               new Content("New Car", 2, "The candy apple red looks great in the summer.", "Steve Madden", 1),
+               new Content("Used Car", 3, "My used car sucks", "Elon Musk",2),
+               new Content("Certfied Preowned", 4, "Not a good good", "Stradman",3),
+                new Content("Certfied Preowned", 7, "Not a good good", "Mr. Bloomberg", 3),
+               new Content("Salvage Title", 5, "Great project car", "DoctaM3",4),
+               new Content("Lease", 6, "Great project car", "Dr. Jay", 4)
                );
 
             modelbuilder.Entity<Category>().HasData(
 
-               new Category("Bernard", 1, "Car drives great. I love it."),
-               new Category("Jody", 2, "I've driven better cars. This car is subpar."),
-               new Category("Chuck", 3, "I'm a pro driver, and wouldn't drive a crappy car like this."),
-               new Category("Dede", 4, "I forgot my sunglasses and this car is a convertible.")
+               new Category("Electric", 1),
+               new Category("Luxury", 2),
+               new Category("Exotic", 3),
+               new Category("Sport", 4)
                );
         }
         public DbSet<CarReview.Models.Category> Category_1 { get; set; }

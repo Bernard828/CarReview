@@ -11,19 +11,17 @@ namespace CarReview.Models
 
         public int CategoryId { get; set; }
 
-        public string CategoryContent { get; set; }
+        public virtual ICollection<Content> Contents { get; set; }
 
-        public virtual Category Categories { get; set; }
         public Category()
         {
 
         }
 
-        public Category(string categoryName, int categoryId, string categoryContent)
+        public Category(string categoryName, int categoryId)
         {
             CategoryName = categoryName;
             CategoryId = categoryId;
-            CategoryContent = categoryContent;
         }
     }
 }

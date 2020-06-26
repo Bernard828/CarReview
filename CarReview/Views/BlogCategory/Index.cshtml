@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CarReview.Models.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Car Categories</h1>
+    @foreach (var category in Model)
+    {
+        <p>Title: <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a></p>
+    }
+</body>
+</html>

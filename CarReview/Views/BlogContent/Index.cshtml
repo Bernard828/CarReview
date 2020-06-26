@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CarReview.Models.Content>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Car Blog List</h1>
+    @foreach(var content in Model)
+    {
+        <p>Title: <a href="/Content/@content.Id">@content.Title</a></p>
+    }
+</body>
+</html>

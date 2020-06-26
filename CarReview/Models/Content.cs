@@ -14,6 +14,7 @@ namespace CarReview.Models
         public string Category { get; set; }
         public DateTime PublishDate { get; set; }
 
+        public virtual ICollection<Content> Contents { get; set; }
         public Content()
         {
 

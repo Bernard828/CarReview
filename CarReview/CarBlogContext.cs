@@ -12,8 +12,6 @@ namespace CarReview.Views
         public DbSet<Content> CarList { get; set; }
         public IEnumerable<Category> Category { get; set; }
 
-        //public DbSet<Review> Reviews { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarDatabase;Trusted_Connection=True;";
@@ -41,4 +39,5 @@ namespace CarReview.Views
                new Category("Dede", 4, "I forgot my sunglasses and this car is a convertible.")
                );
         }
+        public DbSet<CarReview.Models.Category> Category_1 { get; set; }
 }   }

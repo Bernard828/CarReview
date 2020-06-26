@@ -21,6 +21,7 @@ namespace CarReview
         {
             Configuration = configuration;
         }
+        
         public IConfiguration Configuration { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -28,7 +29,8 @@ namespace CarReview
         {
             services.AddMvc();
             services.AddDbContext<CarBlogContext>();
-            //services.AddScoped<IRepository<CarClass>, CarRepository>();
+            services.AddScoped<IRepository<Content>, CarRepository>();
+            services.AddScoped<IRepository<Category>, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +49,7 @@ namespace CarReview
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Course}/{action=Index}/{id?}");
+                    pattern: "{controller=Content}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

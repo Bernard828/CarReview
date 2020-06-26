@@ -13,6 +13,7 @@ namespace CarReview.Models
 
         public string CategoryContent { get; set; }
 
+        public virtual Category Categories { get; set; }
         public Category()
         {
 

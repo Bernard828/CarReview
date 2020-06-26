@@ -49,7 +49,7 @@ namespace CarReview
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Content}/{action=Index}/{id?}");
+                    pattern: "{controller=Category}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

@@ -10,7 +10,7 @@ namespace CarReview.Views
     public class CarBlogContext : DbContext
     {
         public DbSet<Content> Contents { get; set; }
-        public DbSet<Category> Category { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

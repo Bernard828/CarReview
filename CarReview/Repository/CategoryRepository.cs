@@ -17,16 +17,16 @@ namespace CarReview.Repository
 
         public IEnumerable<Category> GetAll()
         {
-            return db.Category;
+            return db.Categories;
         }
 
         public Category GetById(int id)
         {
-            return db.Category.Single(c => c.CategoryId == id);
+            return db.Categories.Single(c => c.CategoryId == id);
         }
 
         public int Count()
         {
-            return db.Category.Count();
+            return db.Categories.Count();
         }
 }   }

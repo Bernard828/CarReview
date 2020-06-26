@@ -17,34 +17,34 @@ namespace CarReview.Repository
 
         public IEnumerable<Content> GetAll()
         {
-            return db.CarList;
+            return db.Contents;
         }
 
         public Content GetById(int id)
         {
-            return db.CarList.Single(c => c.Id == id);
+            return db.Contents.Single(c => c.Id == id);
         }
 
         public int Count()
         {
-            return db.CarList.Count();
+            return db.Contents.Count();
         }
 
         public void Create(Content content)
         {
-            db.CarList.Add(content);
+            db.Contents.Add(content);
             db.SaveChanges();
         }
 
         public void Delete(Content content)
         {
-            db.CarList.Remove(content);
+            db.Contents.Remove(content);
             db.SaveChanges();
         }
 
         public void Update(Content content)
         {
-            db.CarList.Update(content);
+            db.Contents.Update(content);
             db.SaveChanges();
         }
     }    }

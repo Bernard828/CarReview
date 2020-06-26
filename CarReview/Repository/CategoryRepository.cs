@@ -22,7 +22,7 @@ namespace CarReview.Repository
 
         public Category GetById(int id)
         {
-            return db.Categories.Single(c => c.CategoryId == id);
+            return db.Categories.SingleOrDefault(c => c.CategoryId == id);
         }
 
         public int Count()

@@ -11,5 +11,6 @@ namespace CarReview.Repository
         IEnumerable<T> GetAll();
         T GetById(int id);
         void Create(Category category);
+        void Update(Category category);
     }
 }

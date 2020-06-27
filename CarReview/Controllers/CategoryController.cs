@@ -45,4 +45,25 @@ namespace CarReview.Controllers
             }
             return View(category);
         }
-    }   }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Category model = categoryRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                categoryRepo.Update(category);
+
+                return RedirectToAction("Details", "Course", new { id = category.CategoryId });
+
+            }
+            return View();
+        }
+    }   
+}

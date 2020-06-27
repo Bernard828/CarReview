@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarReview.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,5 +10,6 @@ namespace CarReview.Repository
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
+        void Create(Category category);
     }
 }

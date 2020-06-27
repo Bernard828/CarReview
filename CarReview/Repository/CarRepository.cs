@@ -47,4 +47,9 @@ namespace CarReview.Repository
             db.Contents.Update(content);
             db.SaveChanges();
         }
+
+        public void Create(Category category)
+        {
+            throw new NotImplementedException();
+        }
     }    }

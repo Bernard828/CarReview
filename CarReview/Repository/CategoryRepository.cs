@@ -32,7 +32,14 @@ namespace CarReview.Repository
 
         public void Create(Category category)
         {
-            throw new NotImplementedException();
+            db.Categories.Add(category);
+            db.SaveChanges();
+        }
+
+        public void Update(Category category)
+        {
+            db.Categories.Update(category);
+            db.SaveChanges();
         }
     }
 }

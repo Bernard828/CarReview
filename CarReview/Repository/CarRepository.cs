@@ -52,4 +52,10 @@ namespace CarReview.Repository
         {
             throw new NotImplementedException();
         }
-    }    }
+
+        public void Update(Category category)
+        {
+            throw new NotImplementedException();
+        }
+    }    
+}

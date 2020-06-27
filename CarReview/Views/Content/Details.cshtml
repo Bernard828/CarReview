@@ -1,0 +1,49 @@
+﻿@model CarReview.Models.Content
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Content</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.CategoryId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="/Content/Create/">Create Blog</a>
+    @*<a href="/Content/Update/@Model.Id">Update</a> |*@
+    <a href="Index">Back to List</a>
+</div>

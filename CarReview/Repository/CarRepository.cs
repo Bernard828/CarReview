@@ -22,7 +22,7 @@ namespace CarReview.Repository
 
         public Content GetById(int id)
         {
-            return db.Contents.Single(c => c.Id == id);
+            return db.Contents.SingleOrDefault(c => c.Id == id);
         }
 
         public int Count()

@@ -12,5 +12,6 @@ namespace CarReview.Repository
         T GetById(int id);
         void Create(Category category);
         void Update(Category category);
+        void Create(Content content);
     }
 }

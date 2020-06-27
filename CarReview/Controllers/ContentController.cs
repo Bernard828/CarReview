@@ -29,5 +29,21 @@ namespace CarReview.Controllers
             var model = contentRepo.GetById(id);
             return View(model);
         }
+
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Content content)
+        {
+            if (ModelState.IsValid)            {
+                contentRepo.Create(content);
+                return RedirectToAction("Index");
+            }
+            return View(content);
+        }
     }
 }

@@ -29,4 +29,10 @@ namespace CarReview.Repository
         {
             return db.Categories.Count();
         }
-}   }
+
+        public void Create(Category category)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

@@ -10,8 +10,8 @@ namespace CarReview.Repository
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
-        void Create(Category category);
-        void Update(Category category);
-        void Create(Content content);
+        void Create(T obj);
+        void Update(T obj);
+        //void Delete(T obj);
     }
 }

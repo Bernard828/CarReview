@@ -45,5 +45,55 @@ namespace CarReview.Controllers
             }
             return View(content);
         }
+        [HttpGet]
+        public ViewResult CreateByContentId(int id)
+        {
+            ViewBag.ContentId = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Update(Content content)
+        {
+
+            content.PublishDate = DateTime.Now;
+
+            if (ModelState.IsValid)
+            {
+                contentRepo.Update(content);
+                return RedirectToAction("Details", "Content", new { id = content.Id });
+            }
+
+            return View(content);
+        }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Content content = contentRepo.GetById(id);
+            content.PublishDate = DateTime.Now;
+            return View(content);
+        }
+
+        //public ActionResult Delete(Review review)
+        //{
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        int restaurantId = review.RestaurantId;
+
+        //        reviewRepo.Delete(review);
+
+        //        return RedirectToAction("Details", "Restaurant", new { id = restaurantId });
+        //    }
+        //    return View(review);
+        //}
+
+        //[HttpGet]
+        //public ViewResult Delete(int id)
+        //{
+        //    Review review = reviewRepo.GetById(id);
+        //    return View(review);
+        //}
     }
 }

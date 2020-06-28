@@ -55,7 +55,8 @@ namespace CarReview.Repository
 
         public void Update(Category category)
         {
-            throw new NotImplementedException();
+            db.Categories.Update(category);
+            db.SaveChanges();
         }
     }    
 }

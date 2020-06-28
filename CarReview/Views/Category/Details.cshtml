@@ -1,4 +1,5 @@
 ﻿@model CarReview.Models.Category
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
@@ -28,7 +29,7 @@
         </dl>
     </div>
     <div>
-        <a asp-action="Edit" asp-route-id="@Model.CategoryId">Edit</a>
+        <a href="/Category/Update/@Model.CategoryId">Update</a>
         <a href="/Category/Index">Back to List</a>
     </div>
 </body>

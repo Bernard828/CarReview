@@ -46,5 +46,10 @@ namespace CarReview.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Update(Content content)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

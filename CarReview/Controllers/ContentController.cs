@@ -41,15 +41,16 @@ namespace CarContent.Controllers
         {
             if (ModelState.IsValid)
             {
+                content.PublishDate = DateTime.Now;
                 contentRepo.Create(content);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Category", new { id = content.CategoryId });
             }
             return View(content);
         }
         [HttpGet]
-        public ViewResult CreateByContentId(int id)
+        public ViewResult CreateByCategoryId(int id)
         {
-            ViewBag.ContentId = id;
+            ViewBag.CategoryId = id;
             return View();
         }
 

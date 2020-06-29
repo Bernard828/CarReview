@@ -1,7 +1,7 @@
 ﻿body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: aqua;
-    background-image: url(Images/golfcourse1.jpg);
+    color: darkred;    
+    background-image:url('../Images/C8 Chevy Corvette Stingray.jpg');
     background-size: cover;
 }
 
@@ -11,4 +11,122 @@
     top: 0;
     left: 0;
     width: 100%;
+}
+
+h1 {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+}
+
+ h4{
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+ }
+
+.post {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.category {
+    opacity: 0.7;
+    background-color: lightgray;
+    border-style: solid;
+    display:flex;
+    justify-content:center;
+}
+.content-index {
+    opacity: 0.7;
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+}
+.car-list {
+    opacity: 0.7;
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+}
+.car-list-post {
+    opacity: 0.7;
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+}
+.index {
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.categoryList {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.update-content {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.update-title {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+
+.create-byId {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.create-title {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.delete-title {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.delete {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.details-title {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.content-details {
+    display: grid;
+    justify-content: center;
+    border-style: solid;
+    opacity: 0.7;
+    background-color: lightgray;
+}
+.row {
+    display: grid;
+    border-style: solid;
+    justify-content: center;
 }

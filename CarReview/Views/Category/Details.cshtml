@@ -10,29 +10,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
     <title>Details</title>
 </head>
 <body>
 
     <div>
-        <h4>Category: @Model.CategoryName</h4>
+        <h3 class="category">Category: @Model.CategoryName</h3>
 
-        @foreach( var content in Model.Contents)
-        {
-            <p> @content.Title </p>
-            <p> @content.Author</p>
-            <p> @content.Body</p>
-            <p> @content.PublishDate</p>
-            
-        }
-
-
-
-    </div>
-    <div>
-        <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a>
-        <hr />
-        <a href="/Category/Index">Back to List</a>
+        <div class="post">
+            @foreach (var content in Model.Contents)
+            {
+                <h4> @content.Title </h4>
+                <p> @content.Author</p>
+                <p> @content.Body</p>
+                <p> @content.PublishDate</p>
+                <hr />
+            }
+            <div>
+                <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a>
+                <hr />
+                <a href="/Category/Index">Back to List</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

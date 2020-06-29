@@ -8,16 +8,19 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
     <title>Index</title>
 </head>
 <body>
-    <h1>Car Blog List</h1>
-    @foreach (var content in Model)
-    {
-        <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
-    }
-    <hr />
-    <a href="/Category/Index">Back to Category</a>
+    <h1 class="car-list">Car Blog List</h1>
+    <div class="car-list-post">
+        @foreach (var content in Model)
+        {
+            <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
+        }
+        <hr />
+        <a href="/Category/Index">Back to Category</a>
+    </div>
+    
 </body>
 </html>

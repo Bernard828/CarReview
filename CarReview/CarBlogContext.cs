@@ -36,10 +36,10 @@ namespace CarReview.Views
 
             modelbuilder.Entity<Category>().HasData(
 
-               new Category("Electric", 1, "C8 Chevy Corvette Stingray.jpg"),
-               new Category("Luxury", 2, "C8 Chevy Corvette Stingray.jpg"),
-               new Category("Exotic", 3, "C8 Chevy Corvette Stingray.jpg"),
-               new Category("Sport", 4, "C8 Chevy Corvette Stingray.jpg")
+               new Category("Electric", 1, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Luxury", 2, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Exotic", 3, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Sport", 4, "2020-rolls-royce-wraith-.jpg")
                );
         }
         public DbSet<CarReview.Models.Category> Category_1 { get; set; }

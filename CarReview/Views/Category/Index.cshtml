@@ -16,10 +16,14 @@
     <div class="categoryList">
         @foreach (var category in Model)
         {
-            <p >Title: <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a></p>
+            <article class="imageStyle">
+                <p>Title: <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a></p>
+                <p><img src="~/Images/2020-rolls-royce-wraith-.jpg" alt="image# @category.CategoryId" /></p>
+            </article>
+
         }
-    <a href="/Content/Index"> View blog's content</a>
+        <a href="/Content/Index"> View blog's content</a>
     </div>
-   
+
 </body>
 </html>

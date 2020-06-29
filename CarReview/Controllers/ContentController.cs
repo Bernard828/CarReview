@@ -63,7 +63,7 @@ namespace CarContent.Controllers
             if (ModelState.IsValid)
             {
                 contentRepo.Update(content);
-                return RedirectToAction("Details", "Content", new { id = content.Id });
+                return RedirectToAction("Details", "Category", new { id = content.CategoryId });
             }
 
             return View(content);

@@ -51,5 +51,10 @@ namespace CarReview.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Delete(Category obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

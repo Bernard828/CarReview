@@ -1,17 +1,23 @@
 ﻿@model CarReview.Models.Content
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
-
 @{
-    ViewData["Title"] = "Create";
+    Layout = null;
 }
 
-<h1>Create</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateContentbyId</title>
+</head>
+<body>
 
 <h4>Content</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="CreateContentbyId">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -34,9 +40,9 @@
                 <span asp-validation-for="PublishDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <input asp-for="CategoryId" class="form-control" />
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                <label asp-for="@Model.CategoryId" class="control-label"></label>
+                <input asp-for="CategoryId" class="form-control" value="@ViewBag.CategoryId">
+                <span asp-validation-for="@Model.CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -46,7 +52,8 @@
 </div>
 
 <div>
-
-    <a href="/Content/Index">Back to List</a>
+    <a asp-action="/Content/Index">Back to List</a>
 </div>
 
+</body>
+</html>

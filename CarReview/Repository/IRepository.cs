@@ -12,6 +12,6 @@ namespace CarReview.Repository
         T GetById(int id);
         void Create(T obj);
         void Update(T obj);
-        //void Delete(T obj);
+        void Delete(T obj);
     }
 }

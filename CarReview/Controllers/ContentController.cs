@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CarReview.Controllers
+namespace CarContent.Controllers
 {
     public class ContentController : Controller
     {
@@ -39,7 +39,8 @@ namespace CarReview.Controllers
         [HttpPost]
         public ActionResult Create(Content content)
         {
-            if (ModelState.IsValid)            {
+            if (ModelState.IsValid)
+            {
                 contentRepo.Create(content);
                 return RedirectToAction("Index");
             }
@@ -75,25 +76,25 @@ namespace CarReview.Controllers
             return View(content);
         }
 
-        //public ActionResult Delete(Review review)
-        //{
+        public ActionResult Delete(Content content)
+        {
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        int restaurantId = review.RestaurantId;
+            if (ModelState.IsValid)
+            {
+                int categoryId = content.CategoryId;
 
-        //        reviewRepo.Delete(review);
+                contentRepo.Delete(content);
 
-        //        return RedirectToAction("Details", "Restaurant", new { id = restaurantId });
-        //    }
-        //    return View(review);
-        //}
+                return RedirectToAction("Details", "Category", new { id = categoryId });
+            }
+            return View(content);
+        }
 
-        //[HttpGet]
-        //public ViewResult Delete(int id)
-        //{
-        //    Review review = reviewRepo.GetById(id);
-        //    return View(review);
-        //}
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Content content = contentRepo.GetById(id);
+            return View(content);
+        }
     }
 }

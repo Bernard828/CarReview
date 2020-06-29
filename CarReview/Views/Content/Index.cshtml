@@ -13,10 +13,12 @@
 </head>
 <body>
     <h1>Car Blog List</h1>
-    @foreach(var content in Model)
+    @foreach (var content in Model)
     {
         <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
     }
-    <a href="/Category/Index"> Select by Category</a>
+    <a href="/Category/Index">Back to Category</a>
+    <hr />
+    <a href="/Content/Create/">Create Blog</a>
 </body>
 </html>

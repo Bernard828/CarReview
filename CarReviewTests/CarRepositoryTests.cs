@@ -46,7 +46,28 @@ namespace CarReviewTests
             underTest.Delete(testContent);
             var endCount = underTest.Count();
             Assert.Equal(startCount, endCount);
+        }
 
+        [Fact]
+        public void Update_Changes_Property()
+        {
+            Content testContent = new Content() { Author = "name", Body = "test", CategoryId = 2 };
+            underTest.Update(testContent);
+        }
+
+        [Fact]
+        public void GetAll_Should_Return_AllContents()
+        {
+            underTest.GetAll();
+            Assert.NotNull(db.Contents);
+        }
+
+        [Fact]
+        public void GetbyId_Should_Return_Selected_Content()
+        {
+            
+            Content expectedContent = underTest.GetById(1);
+            Assert.Equal("Steve Jobs", expectedContent.Author);
         }
     }
 }

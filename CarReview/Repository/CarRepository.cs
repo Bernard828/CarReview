@@ -1,5 +1,6 @@
 ﻿using CarReview.Models;
 using CarReview.Views;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,15 +49,5 @@ namespace CarReview.Repository
             db.SaveChanges();
         }
 
-        public void Create(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Category category)
-        {
-            db.Categories.Update(category);
-            db.SaveChanges();
-        }
     }    
 }

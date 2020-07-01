@@ -73,7 +73,6 @@ namespace CarContent.Controllers
         public ViewResult Update(int id)
         {
             Content content = contentRepo.GetById(id);
-            content.PublishDate = DateTime.Now;
             return View(content);
         }
 

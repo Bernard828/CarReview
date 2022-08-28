@@ -10,8 +10,8 @@
 
 <div>
     
+    <h4>Content</h4>
     <dl class="content-details">
-        <h4>Content</h4>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -42,6 +42,7 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
+    </dl>
     <form>
 
         <hr />
@@ -50,6 +51,5 @@
             <a href="/Content/Delete/@Model.Id">Delete Blog</a>
         </div>
     </form>
-    </dl>
 </div>
 

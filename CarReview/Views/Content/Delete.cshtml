@@ -1,0 +1,57 @@
+﻿@model CarReview.Models.Content
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
+<div class="delete-title">
+    <h1>Delete</h1>
+
+    <h3>Are you sure you want to delete this?</h3>
+
+</div>
+
+<div>
+
+    <dl class="delete">
+        <h4>Content</h4>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.CategoryId)
+        </dd>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CategoryId" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        @*<a href="/Content/Details">Back to List</a>*@
+    </form>
+    </dl>
+
+</div>

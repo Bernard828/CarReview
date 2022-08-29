@@ -1,0 +1,38 @@
+﻿@model CarReview.Models.Category
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h3 class="category">Category: @Model.CategoryName</h3>
+
+        <div class="post">
+            @foreach (var content in Model.Contents)
+            {
+                <h4> @content.Title </h4>
+                <p> @content.Author</p>
+                <p> @content.Body</p>
+                <p> @content.PublishDate</p>
+                <hr />
+            }
+            <div>
+                <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a>
+                <hr />
+                <a href="/Category/Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

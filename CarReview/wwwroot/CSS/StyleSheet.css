@@ -74,10 +74,10 @@ h1 {
     margin-right: 100px;
 }
 
-/*.imageStyle{
+.image{
     height: 20px;
     width: 20px;
-}*/
+}
 .update-content {
     display: grid;
     border-style: solid;

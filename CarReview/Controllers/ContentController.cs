@@ -10,7 +10,7 @@ namespace CarContent.Controllers
 {
     public class ContentController : Controller
     {
-        IRepository<Content> contentRepo;
+        readonly IRepository<Content> contentRepo;
 
         public ContentController(IRepository<Content> contentRepo)
         {

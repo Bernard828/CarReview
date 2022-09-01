@@ -36,13 +36,14 @@ namespace CarReview.Views
 
             modelbuilder.Entity<Category>().HasData(
 
-               new Category("Electric", 1, "electricTransportation.jpg"),
-               new Category("Luxury", 2, "luxuryTransportation.jpg"),
-               new Category("Exotic", 3, "exoticTransportation.jpg"),
-               new Category("Muscle", 4, "muscleTransportation.jpg"),
-               // FIND A WAY TO ADD MULTIPLE STOCK PHOTOS FOR RANDOM --> POPULATED EXACT LIBRARY.
-               new Category("Airplane", 5, "airplaneTransportation.jpg"),
-               new Category("Bus", 6, "busTransportation.jpg")
+
+               new Category("Electric", 1, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Luxury", 2, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Exotic", 3, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Sport", 4, "2020-rolls-royce-wraith-.jpg"),
+               new Category("Muscle", 5, ""),
+               new Category ("Airplane", 6, ""),
+               new Category("Bus", 7, "")
                );
         }
         public DbSet<CarReview.Models.Category> Category_1 { get; set; }

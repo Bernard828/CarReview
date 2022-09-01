@@ -10,7 +10,9 @@
 
 <div>
     
+
     <h4 class="contentTitle">Content</h4>
+
     <dl class="content-details">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
@@ -45,8 +47,10 @@
     </dl>
     <form>
         <hr />
-        <a href="/Content/Update/@Model.Id">Update</a>
-        <a href="/Content/Delete/@Model.Id">Delete Blog</a>
+        <div class="returnLinks">
+            <a href="/Content/Update/@Model.Id">Update</a>
+            <a href="/Content/Delete/@Model.Id">Delete Blog</a>
+        </div>
     </form>
 </div>
 

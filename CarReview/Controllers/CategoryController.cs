@@ -10,7 +10,7 @@ namespace CarReview.Controllers
 {
     public class CategoryController : Controller
     {
-        IRepository<Category> categoryRepo;
+        private readonly IRepository<Category> categoryRepo;
 
         public CategoryController(IRepository<Category>categoryRepo)
         {

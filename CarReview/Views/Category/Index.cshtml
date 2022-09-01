@@ -16,9 +16,13 @@
     <div class="categoryList">
         @foreach (var category in Model)
         {
-            <article class="imageStyle">
-                <p>Title: <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a></p>
-                <p><img src="~/Images/2020-rolls-royce-wraith-.jpg" alt="image# @category.CategoryId" /></p>
+            <article class="category">
+                <p class="categoryTitle">Title: 
+                    <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
+                </p>
+                <p>
+                    <img src="@category.Image" alt="image# @category.CategoryId" />
+                </p>
             </article>
 
         }

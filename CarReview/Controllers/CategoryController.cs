@@ -60,7 +60,7 @@ namespace CarReview.Controllers
             {
                 categoryRepo.Update(category);
 
-                return RedirectToAction("Details", "Category", new { id = category.CategoryId });
+                return RedirectToAction("Details", "Category", new { id = category.CategoryId});
 
             }
             return View();

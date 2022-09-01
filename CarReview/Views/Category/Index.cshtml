@@ -18,12 +18,9 @@
         @foreach (var category in Model)
         {
             <article class="category">
-                <p class="categoryTitle">Title: 
-                    <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
-                </p>
-                <p>
-                    <img src="@category.Image" alt="image# @category.CategoryId" />
-                </p>
+                <a class="categoryTitle" href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
+                @*Modify image source please!!!*@
+                <img src="" alt="image# @category.CategoryId" />
             </article>
 
         }

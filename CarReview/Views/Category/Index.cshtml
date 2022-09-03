@@ -8,23 +8,36 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    <link rel="stylesheet" type="text/css" href="~/Images/"/>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
+    @* <link rel="stylesheet" type="text/css" href="~/images/" />*@
     <title>Index</title>
 </head>
-<body>
-    <h1 class="index" id="mainPage">Car Categories</h1>
-    <div class="categoryList">
-        @foreach (var category in Model)
-        {
-            <article class="category">
-                <a class="categoryTitle" href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
-                @*Modify image source please!!!*@
-                <img src="" alt="image# @category.CategoryId" />
-            </article>
+<body class="index" id="mainPage">
+    <h1 class="mainPageHeading">Car Categories</h1>
+    <div class="mainPageList">
+        <ul>
+            @foreach (var category in Model)
+            {
+                <div class="forEachCategory">
+                    <div class="categoryTitle">
+                        <a href="/Category/Details/@category.CategoryId">
+                            <span>@category.CategoryName Transportation</span>
+                        </a>
+                    </div>
 
-        }
-        <a href="/Content/Index"> View blog's content</a>
+
+                    @*Modify image source please!!!*@
+                    <div class="categoryImage">
+                        "Image"
+                        <img src="@category.CategoryId" alt="@category.CategoryId" />
+                    </div>
+
+                </div>
+            }
+        </ul>
+        <div class="mainPageLinks">
+            <a href="/Content/Index"> View blog's content</a>
+        </div>
     </div>
 
 </body>

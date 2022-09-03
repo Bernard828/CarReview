@@ -10,7 +10,7 @@ namespace CarReview.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly IRepository<Category> categoryRepo;
+        private IRepository<Category> categoryRepo;
 
         public CategoryController(IRepository<Category>categoryRepo)
         {
@@ -47,7 +47,7 @@ namespace CarReview.Controllers
         }
 
         [HttpGet]
-        public ViewResult Update(int id)
+        public ViewResult Update(int id, string image)
         {
             Category model = categoryRepo.GetById(id);
             return View(model);

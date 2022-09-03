@@ -74,9 +74,9 @@ h1 {
     margin-right: 100px;
 }
 
-.image{
-    height: 20px;
-    width: 20px;
+.categoryImage{
+    height: 20%;
+    width: 15%;
 }
 .update-content {
     display: grid;

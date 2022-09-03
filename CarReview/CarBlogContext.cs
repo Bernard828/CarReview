@@ -36,12 +36,12 @@ namespace CarReview.Views
                );
 
             modelbuilder.Entity<Category>().HasData(
-                //!!!!!!!!!!WIP:getting images to display cprrect reference code
+                //!!!!!!!!!!WIP:getting images to display correct reference code
+               // FIND A WAY TO ADD MULTIPLE STOCK PHOTOS FOR RANDOM --> POPULATED EXACT LIBRARY.
                new Category("Electric", 1, "electricTransportation.jpg"),
                new Category("Luxury", 2, "luxuryTransportation.jpg"),
                new Category("Exotic", 3, "C8 Chevy Corvette Stingray.jpg"),
                new Category("Muscle", 4, "muscleTransportation.jpg"),
-               // FIND A WAY TO ADD MULTIPLE STOCK PHOTOS FOR RANDOM --> POPULATED EXACT LIBRARY.
                new Category( "Airplane", 5, "airplaneTransportation.jpg"),
                new Category("Bus", 6, "busTransportation.jpg")
                );

@@ -42,15 +42,15 @@ namespace CarReview.Repository
             db.SaveChanges();
         }
 
-        public void Create(Content content)
-        {
-            throw new NotImplementedException();
-        }
+        //public void Create(Content content)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void Update(Content content)
-        {
-            throw new NotImplementedException();
-        }
+        //public void Update(Content content)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void Delete(Category obj)
         {

@@ -15,26 +15,24 @@
 <body class="index" id="mainPage">
     <h1 class="mainPageHeading">Car Categories</h1>
     <div class="mainPageList">
-        <ul>
-            @foreach (var category in Model)
-            {
-                <div class="forEachCategory">
-                    <div class="categoryTitle">
-                        <a href="/Category/Details/@category.CategoryId">
-                            <span>@category.CategoryName Transportation</span>
-                        </a>
-                    </div>
-
-
-                    @*Modify image source please!!!*@
-                    <div class="categoryImage">
-                        "Image"
-                        <img src="@category.CategoryId" alt="@category.CategoryId" />
-                    </div>
-
+        @foreach (var category in Model)
+        {
+            <div class="forEachCategory">
+                <div class="categoryTitle">
+                    <a href="/Category/Details/@category.CategoryId">
+                        <span>@category.CategoryName Transportation</span>
+                    </a>
                 </div>
-            }
-        </ul>
+            </div>
+        }
+        @foreach (var image in Model)
+        {
+            <div class="categoryImage">
+                "Image"
+                @*Modify image source please!!!*@
+                <img src="@image.Image" alt="@image.CategoryId" />
+            </div>
+        }
         <div class="mainPageLinks">
             <a href="/Content/Index"> View blog's content</a>
         </div>

@@ -12,15 +12,17 @@
     <title>Index</title>
 </head>
 <body>
-    <h1 class="car-list">Car Blog List</h1>
+    <h1 class="car-list">View All Car Post and Reviews</h1>
     <div class="car-list-post">
         @foreach (var content in Model)
         {
-            <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
+            <p>
+                Title: <a href="/Content/Details/@content.Id"> @content.Id </a> @content.Author : <b><t>@content.Title</t></b>
+            </p>
         }
         <hr />
         <a href="/Category/Index">Back to Category</a>
     </div>
-    
+
 </body>
 </html>

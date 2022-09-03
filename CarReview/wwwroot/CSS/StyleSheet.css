@@ -1,7 +1,7 @@
 ﻿body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: darkred;    
-    background-image:url('../Images/C8 Chevy Corvette Stingray.jpg');
+    /*background-image:url('../Images/C8 Chevy Corvette Stingray.jpg');*/
     background-size: cover;
 }
 
@@ -121,6 +121,7 @@ h1 {
     opacity: 0.7;
     background-color: lightgray;
 }
+/*ADD DEMENSION TO CHANGE COLOR BASED OFF OF IMAGE COLOR SET TO AUTOMATED CIRCLES*/
 .details-title {
     display: grid;
     justify-content: center;

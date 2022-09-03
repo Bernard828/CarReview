@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-    <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
+<link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
 
 <h1>Create</h1>
 
@@ -39,6 +39,11 @@
                 <input asp-for="CategoryId" class="form-control" />
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
+            @* USER CAN UPLOAD IMAGE FILE
+                [Display(Name = "Upload File")]
+                public List<IFormFile> DocumentFiles { get; set; }
+                public string UserId { get; set; }
+            *@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

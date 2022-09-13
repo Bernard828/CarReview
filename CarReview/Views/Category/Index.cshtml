@@ -9,15 +9,17 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    <title>Index</title>
+    <title>Index Main Page</title>
 </head>
 <body>
-    <h1 class="CategoryIndex">Car Categories</h1>
+    <h2 class="mainPageTitle">Main Page</h2>
+    <h3 class="CategoryIndex">Car Categories</h3>
     <div class="categoryViewAll">
         @foreach (var category in Model)
         {
             <article class="category">
-                <p class="categoryTitle">Title: 
+                <p class="categoryTitle">
+                    Title:
                     <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
                 </p>
                 <p>
@@ -27,7 +29,8 @@
             </article>
 
         }
-        <a href="/Content/Index"> View blog's content</a>
+
+        <a href="/Content/Index"> View all car reviews </a>  @* STEP 1: LEADS TO DELETE ACTION *@
     </div>
 
 </body>

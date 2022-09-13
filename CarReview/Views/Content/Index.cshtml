@@ -12,15 +12,21 @@
     <title>Index</title>
 </head>
 <body>
-    <h1 class="car-list">Car Blog List</h1>
-    <div class="car-list-post">
-        @* PUT A DELTETE NEXT TO INDIVIDUAL CONTENT *@
+    <h1 class="car-list">All Car Reviews</h1>
+    <div class="car-list-post" alt="allCarReviewsList">
         @foreach (var content in Model)
         {
-            <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
+            <p>
+                Title:
+                @* STEP 2: LEADING TO DELETE VARIABLE *@
+                <a href="/Content/Details/@content.Id">@content.Title</a>
+            </p>
+            <p>DELETE goes here</p>
+            @* PUT A DELTETE NEXT TO INDIVIDUAL CONTENT *@
         }
-        <a href="/Category/Index">Back to Category</a>
+
+        <a href="/Category/Index">Main Page</a>
     </div>
-    
+
 </body>
 </html>

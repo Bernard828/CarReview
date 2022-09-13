@@ -22,20 +22,21 @@
             @foreach (var content in Model.Contents)
             {
                 <div>
-                <h4 class="categoryContenListTitle"> @content.Title </h4>
-                <p class="categoryContentListAuthor"> @content.Author</p>
-                <p class="categoryContentListBody"> @content.Body</p>
-                <p class="categoryContentListPublishDate"> @content.PublishDate</p>
-                <hr />
+                    <h4 class="categoryContenListTitle"> @content.Title </h4>
+                    <p class="categoryContentListAuthor"> @content.Author</p>
+                    <p class="categoryContentListBody"> @content.Body</p>
+                    <p class="categoryContentListPublishDate"> @content.PublishDate</p>
                 </div>
+                //STEP 2: ADD DELETE BUTTON FOR EACH CONTENT ID!!
+                <div>Delete button goes here</div>
             }
+            <br />
             <div class="contentCategoryLinks">
-                <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a>
-                <hr />
+                <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a> @* LEADS TO 'BACK TO MAIN LIST' ERROR LINK ON NEXT VIEW PAGE *@
                 <a href="/Category/Index">Back to List</a>
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>

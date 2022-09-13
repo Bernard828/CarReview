@@ -16,17 +16,17 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <input asp-for="Title" class="form-control" alt="Title Goes Here"/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Body" class="control-label"></label>
-                <input asp-for="Body" class="form-control" />
+                <input asp-for="Body" class="form-control" alt="Body Text Goes Here"/>
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Author" class="control-label"></label>
-                <input asp-for="Author" class="form-control" />
+                <input asp-for="Author" class="form-control" alt="Name for Author Goes Here" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -39,7 +39,7 @@
                 <input asp-for="CategoryId" class="form-control" />
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="createCategoryContent">
                 <input type="submit" value="Create Car Review" class="btn btn-primary" />
             </div>
         </form>

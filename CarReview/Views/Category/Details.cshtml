@@ -11,28 +11,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-   @* DOES TITLE AFFECT THE VIEWPAGE LINK DIRECTION??????????????? *@
-    <title>Details</title>
+    @* DOES TITLE AFFECT THE VIEWPAGE LINK DIRECTION??????????????? *@
+    <title>Category Details View</title>
 </head>
 <body>
-    <div class="categoryContentViewAll"
+    <div class="categoryContentViewAll">
         <h3 class="categoryContentPageTitle">Category: @Model.CategoryName</h3>
 
-        <div class="post">
+        <div class="categoryDetailsViewAllContent">
             @foreach (var content in Model.Contents)
             {
-                <h4> @content.Title </h4>
-                <p> @content.Author</p>
-                <p> @content.Body</p>
-                <p> @content.PublishDate</p>
+                <div>
+                <h4 class="categoryContenListTitle"> @content.Title </h4>
+                <p class="categoryContentListAuthor"> @content.Author</p>
+                <p class="categoryContentListBody"> @content.Body</p>
+                <p class="categoryContentListPublishDate"> @content.PublishDate</p>
                 <hr />
+                </div>
             }
-            <div>
+            <div class="contentCategoryLinks">
                 <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a>
                 <hr />
                 <a href="/Category/Index">Back to List</a>
             </div>
         </div>
     </div>
+    
 </body>
 </html>

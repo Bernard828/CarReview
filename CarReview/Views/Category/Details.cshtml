@@ -20,10 +20,13 @@
         @foreach (var content in Model.Contents)
         {
             <div class="foreachDetailsCategory">
+                @* SELECT TYPE OF CAR AN YEAR: BUILD DATABASE WITH DROPDOWN *@
                 <h4 class="Title"> @content.Title </h4>
                 <p class="Author"> @content.Author</p>
                 <p class="Body"> @content.Body</p>
                 <p class="PublishDate"> @content.PublishDate</p>
+                <p>Image goes here</p>
+                @* IMAGE: BE ABLE TO VIEW SPECIFIC IMAGE *@
             </div>
             //STEP 2: ADD DELETE BUTTON FOR EACH CONTENT ID!!
             <div>Delete button goes here</div>

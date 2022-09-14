@@ -7,8 +7,9 @@
 <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
 @* BREAK ALERT!!!!!
     APP DOESNT SEEM TO LIKE THE IDEA OF BACKING UP OUT OF THE OPTION TO DELETE ON 'BACK TO LIST' PAGE REFERENCE*@
+<title>Delete Content</title>
 <div>
-    <div class="delete-title">
+    <div class="deleteHeader">
         <p>Are you sure you want to delete <b>@Html.DisplayFor(model => model.Author)</b>'s Review <b>'@Html.DisplayFor(model => model.Title)'</b>' ?</p>
         <div class="deleteButtonDiv">
             <form asp-action="Delete">
@@ -19,6 +20,7 @@
         </div>
     </div>
     <dl class="delete">
+        @* class="deleteContent" *@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -51,9 +53,13 @@
         </dd>
     </dl>
 <div class="deleteViewLinkDiv">
-    <a href="/Category/Index">Back to Main Page</a>
+    <section>
+        <a href="/Category/Index">Back to Main Page</a>
+    </section>
+    
     @* TARGET ENEMY, FIX WORK ENJOY!!! *@
-    <a href="/Content/Details">Back to Category</a>
+   
+    
 </div>
 
 

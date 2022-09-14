@@ -16,7 +16,8 @@
 </head>
 <body>
     <div class="detailsCategory">
-        <h3 class="detailsCategoryTitle">Category: @Model.CategoryName</h3>
+        <h3 class="detailsCategoryTitle">@Model.CategoryName</h3>
+       
         @foreach (var content in Model.Contents)
         {
             <div class="foreachDetailsCategory">

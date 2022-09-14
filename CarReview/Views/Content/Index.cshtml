@@ -9,25 +9,28 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    <title>Index</title>
+    <title>Content Index</title>
 </head>
 <body>
     <h1 class="car-list">All Car Reviews</h1>
     <div class="car-list-post" alt="allCarReviewsList">
         @foreach (var content in Model)
         {
-            //PUT IN THE ORDER FOR MOST RECENT
-            <p>
+            //PUT IN THE ORDER OF MOST RECENT
+            <section>
                 Title:
                 <a href="/Content/Details/@content.Id">@content.Title</a>
-            </p>
-            <p>@content.Author, @content.Body</p>
+            </section>
+            
+            <section>
+                @content.Author, @content.Body
+                <a href="/Content/Delete/@content.Id">Delete Blog</a>
+            </section>
+            <section>
+                <a href="/Category/Details/@content.CategoryId">View *this category's' reiews</a>
+            </section>
 
-            <a href="/Content/Delete/@content.Id">Delete Blog</a>
-            @* STEP 1 TO ACTUALLY DELETING MODEL FROM THE 'VIEW ALL REVIEWS' LIST *@
         }
-
-        <a href="/Category/Index">Main Page</a>
     </div>
 
 </body>

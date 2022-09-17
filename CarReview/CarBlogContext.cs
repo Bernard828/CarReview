@@ -46,6 +46,6 @@ namespace CarReview.Views
                new Category("Bus", 7, "")
                );
         }
-        public DbSet<CarReview.Models.Category> Category_1 { get; set; }
+        //public DbSet<CarReview.Models.Category> Category_1 { get; set; }
     }
 }

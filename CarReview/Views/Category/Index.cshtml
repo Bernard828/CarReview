@@ -18,20 +18,18 @@
         @foreach (var category in Model)
         {
             <article class="category">
-                <p class="categoryTitle">
-                    Title:
+                <section class="categoryTitle">Title:
                     <a href="/Category/Details/@category.CategoryId">@category.CategoryName</a>
-                </p>
-                <p>
-                    <img src="@category.Image" alt="image# @category.CategoryId" />
-                </p>
-                <div><a href="/Category/Details/@category.CategoryId"> @category.Image</a></div>
+                </section>
+                <section>
+                    <img src="~/images/@category.Image" alt="image#@category.CategoryId" />
+                </section>
             </article>
 
         }
+        <a href="/Content/Index"> View all car reviews </a>  @* STEP 1: LEADS TO DELETE ACTION *@
         @* 'CREATE BLOG' *@
         @* UPDATE CATEGORY PROPERTIES FROM THIS PAGE *@
-        <a href="/Content/Index"> View all car reviews </a>  @* STEP 1: LEADS TO DELETE ACTION *@
     </div>
 
 </body>

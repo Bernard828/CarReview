@@ -40,10 +40,11 @@ namespace CarReview.Views
                new Category("Electric", 1, ""),
                new Category("Luxury", 2, ""),
                new Category("Exotic", 3, ""),
-               new Category("Sport", 4, ""),
-               new Category("Muscle", 5, ""),
-               new Category ("Airplane", 6, ""),
-               new Category("Bus", 7, "")
+               new Category("Muscle", 4, ""),
+               new Category ("Airplane", 5, "airplaneTransportation.jpg"),
+               new Category("Bus", 9, "busTransportation.jpg"),
+               new Category("Truck", 10, "")
+
                );
         }
         //public DbSet<CarReview.Models.Category> Category_1 { get; set; }

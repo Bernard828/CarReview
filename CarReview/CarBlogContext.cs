@@ -41,10 +41,11 @@ namespace CarReview.Views
                new Category("Luxury", 2, ""),
                new Category("Exotic", 3, ""),
                new Category("Muscle", 4, ""),
-               new Category ("Airplane", 5, "airplaneTransportation.jpg"),
+               new Category ("Airplane", 5, ""),
                new Category ("",6,""),
-               new Category("",7,""), new Category ("",8,""),
-               new Category("Bus", 9, "busTransportation.jpg"),
+               new Category("",7,""), 
+               new Category ("",8,""),
+               new Category("Bus", 9, ""),
                new Category("Truck", 10, "")
 
                );

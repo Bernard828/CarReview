@@ -17,6 +17,7 @@
         @foreach (var content in Model)
         {
             //PUT IN THE ORDER OF MOST RECENT
+            //ORER ITEMS BY CATEGORY FIRST
             <section>
                 Title:
                 <a href="/Content/Details/@content.Id">@content.Title</a>
@@ -27,9 +28,12 @@
                 <a href="/Content/Delete/@content.Id">Delete Blog</a>
             </section>
             <section>
-                <a href="/Category/Details/@content.CategoryId">View *this category's' reiews</a>
+                <a href="/Category/Details/@content.CategoryId">View this reiew</a>
             </section>
+            <section class="">
+                <a href="/Category/Index/">HOME</a>
 
+            </section>
         }
     </div>
 

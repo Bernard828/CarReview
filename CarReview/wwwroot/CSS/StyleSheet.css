@@ -1,10 +1,11 @@
 ﻿body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: darkred;    
-    background-image:url('../Images/C8 Chevy Corvette Stingray.jpg');
-    background-size: cover;
 }
-
+img.categoryImage{
+    height:80%;
+    width:50%;
+}
 #Review Section article {
     display: flex;
     justify-content: center;
@@ -74,10 +75,6 @@ h1 {
     margin-right: 100px;
 }
 
-.image{
-    height: 20px;
-    width: 20px;
-}
 .update-content {
     display: grid;
     border-style: solid;

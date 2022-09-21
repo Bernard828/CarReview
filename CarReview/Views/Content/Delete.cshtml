@@ -5,12 +5,15 @@
     ViewData["Title"] = "Delete";
 }
 <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-@* BREAK ALERT!!!!!
-    APP DOESNT SEEM TO LIKE THE IDEA OF BACKING UP OUT OF THE OPTION TO DELETE ON 'BACK TO LIST' PAGE REFERENCE*@
+
 <title>Delete Content</title>
+
 <div>
+
     <div class="deleteHeader">
+
         <p>Are you sure you want to delete <b>@Html.DisplayFor(model => model.Author)</b>'s Review <b>'@Html.DisplayFor(model => model.Title)'</b>' ?</p>
+
         <div class="deleteButtonDiv">
             <form asp-action="Delete">
                 <input type="hidden" asp-for="Id" />
@@ -18,7 +21,9 @@
                 <input type="submit" value="Delete" class="btn btn-danger" id="delete" />
             </form>
         </div>
+
     </div>
+   
     <dl class="delete">
         @* class="deleteContent" *@
         <dt class="col-sm-2">
@@ -52,15 +57,12 @@
             @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
     </dl>
-<div class="deleteViewLinkDiv">
-    <section>
+
+
+    <section class="deleteViewLinkDiv">
+
         <a href="/Category/Index">Back to Main Page</a>
     </section>
-    
-    @* TARGET ENEMY, FIX WORK ENJOY!!! *@
-   
-    
-</div>
-
 
 </div>
+

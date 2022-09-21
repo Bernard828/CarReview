@@ -12,11 +12,14 @@
     <title>Content Index</title>
 </head>
 <body>
+
     <section class="header">
         <a href="/Category/Index/">HOME</a>
     </section>
-    <h1 class="car-list">All Car Reviews</h1>
+
     <div class="car-list-post" alt="allCarReviewsList">
+
+        <h1 class="car-list">All Car Reviews</h1>
 
         @*//PUT IN THE ORDER OF MOST RECENT
             //ORER ITEMS BY CATEGORY FIRST*@
@@ -35,6 +38,7 @@
             </section>
             <section>
                 <a href="/Content/Delete/@content.Id">Delete Blog</a>
+                @* DELETE 1: PATHWAY FOR DELETE ACTION *@
                 <a href="/Category/Details/@content.CategoryId">View this reiew</a>
             </section>
             <section class="">

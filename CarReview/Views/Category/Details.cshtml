@@ -11,11 +11,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    @* DOES TITLE AFFECT THE VIEWPAGE LINK DIRECTION??????????????? *@
     <title>Category Details View</title>
 </head>
+
 <body>
     <div class="detailsCategory">
+
         <h3 class="detailsCategoryTitle">@Model.CategoryName</h3>
 
         @foreach (var content in Model.Contents)

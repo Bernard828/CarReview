@@ -9,18 +9,43 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    <title>Index</title>
+    <title>Content Index</title>
 </head>
 <body>
-    <h1 class="car-list">Car Blog List</h1>
-    <div class="car-list-post">
-        @* PUT A DELTETE NEXT TO INDIVIDUAL CONTENT *@
+
+    <section class="header">
+        <a href="/Category/Index/">HOME</a>
+    </section>
+
+    <div class="car-list-post" alt="allCarReviewsList">
+
+        <h1 class="car-list">All Car Reviews</h1>
+
+        @*//PUT IN THE ORDER OF MOST RECENT
+            //ORER ITEMS BY CATEGORY FIRST*@
+
         @foreach (var content in Model)
         {
-            <p>Title: <a href="/Content/Details/@content.Id">@content.Title</a></p>
+            <section>
+                @content.Id . Title:
+                <a href="/Content/Details/@content.Id">@content.Title</a>
+                <br />
+                @content.Author
+                <br />
+                @content.Body
+                <br />
+                @content.PublishDate
+            </section>
+            <section>
+                <a href="/Content/Delete/@content.Id">Delete Blog</a>
+                @* DELETE 1: PATHWAY FOR DELETE ACTION *@
+                <a href="/Category/Details/@content.CategoryId">View this reiew</a>
+                <a href="/Content/Update/@content.Id">Update</a>
+            </section>
+            <section class="">
+            </section>
         }
-        <a href="/Category/Index">Back to Category</a>
     </div>
-    
+
 </body>
 </html>

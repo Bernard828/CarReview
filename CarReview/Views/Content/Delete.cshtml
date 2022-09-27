@@ -6,15 +6,26 @@
 }
 <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
 
+<title>Delete Content</title>
+
 <div>
-    <div class="delete-title">
-        <h1>Delete</h1>
-        <p>Are you sure you want to delete this?</p>
+
+    <div class="deleteHeader">
+
+        <p>Are you sure you want to delete <b>@Html.DisplayFor(model => model.Author)</b>'s Review <b>'@Html.DisplayFor(model => model.Title)'</b>' ?</p>
+
+        <div class="deleteButtonDiv">
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="CategoryId" />
+                <input type="submit" value="Delete" class="btn btn-danger" id="delete" />
+            </form>
+        </div>
+
     </div>
-
-    <h4>Content</h4>
-
+   
     <dl class="delete">
+        @* class="deleteContent" *@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -46,17 +57,12 @@
             @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
     </dl>
-    <div class="deleteButtonDiv">
-        <form asp-action="Delete">
-            <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="CategoryId" />
-            <input type="submit" value="Delete" class="btn btn-danger" id="delete" />
-        </form>
-    </div>
-   
-    <div class="deleteViewLinkDiv">
-        <a href="/Cateogry/Details">Back to List</a>
-    </div>
 
+
+    <section class="deleteViewLinkDiv">
+
+        <a href="/Category/Index">Back to Main Page</a>
+    </section>
 
 </div>
+

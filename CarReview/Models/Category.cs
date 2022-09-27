@@ -8,8 +8,11 @@ namespace CarReview.Models
     public class Category
     {
         public string CategoryName { get; set; }
+
         public int CategoryId { get; set; }
+
         public string Image { get; set; }
+
         public virtual ICollection<Content> Contents { get; set; }
 
         public Category()

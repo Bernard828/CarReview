@@ -11,31 +11,37 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
-    @* DOES TITLE AFFECT THE VIEWPAGE LINK DIRECTION??????????????? *@
     <title>Category Details View</title>
 </head>
-<body>
-    <div class="categoryContentViewAll">
-        <h3 class="categoryContentPageTitle">Category: @Model.CategoryName</h3>
 
-        <div class="categoryDetailsViewAllContent">
-            @foreach (var content in Model.Contents)
-            {
-                <div>
-                    <h4 class="categoryContenListTitle"> @content.Title </h4>
-                    <p class="categoryContentListAuthor"> @content.Author</p>
-                    <p class="categoryContentListBody"> @content.Body</p>
-                    <p class="categoryContentListPublishDate"> @content.PublishDate</p>
-                </div>
-                //STEP 2: ADD DELETE BUTTON FOR EACH CONTENT ID!!
-                <div>Delete button goes here</div>
-            }
-            <br />
-            <div class="contentCategoryLinks">
-                <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a> @* LEADS TO 'BACK TO MAIN LIST' ERROR LINK ON NEXT VIEW PAGE *@
-                <a href="/Category/Index">Back to List</a>
-            </div>
-        </div>
+<body>
+    <div class="detailsCategory">
+
+        <h3 class="detailsCategoryTitle">@Model.CategoryName</h3>
+
+        @foreach (var content in Model.Contents)
+        {
+            <section class="foreachDetailsCategory">
+                @* SELECT TYPE OF CAR AND YEAR: BUILD DATABASE WITH DROPDOWN *@
+                <h4 class="Title"> @content.Title </h4> @*class="Type"*@ 
+                <p class="Author"> @content.Author</p>
+                <p class="Body"> @content.Body</p>
+                <p class="PublishDate"> @content.PublishDate</p>
+                <p>Image goes here</p>
+                @* IMAGE: BE ABLE TO VIEW SPECIFIC IMAGE *@
+            </section>
+            <section>
+                <a href="/Content/Delete/@content.Id">Delete</a>
+                <a href="/Content/Update/@content.Id">Update</a>
+            </section>
+        }
+        <br />
+        <section class="contentCategoryLinks">
+            <a href="/Content/CreateByCategoryId/@Model.CategoryId">Create Blog</a> @* LEADS TO 'BACK TO MAIN LIST' ERROR LINK ON NEXT VIEW PAGE *@
+            <a href="/Category/Index">HOME</a>
+            <a href="/Content/Index">All reviews</a>
+        </section>
+
     </div>
 
 </body>

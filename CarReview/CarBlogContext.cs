@@ -37,15 +37,19 @@ namespace CarReview.Views
             modelbuilder.Entity<Category>().HasData(
 
 
-               new Category("Electric", 1, "2020-rolls-royce-wraith-.jpg"),
-               new Category("Luxury", 2, "2020-rolls-royce-wraith-.jpg"),
-               new Category("Exotic", 3, "2020-rolls-royce-wraith-.jpg"),
-               new Category("Sport", 4, "2020-rolls-royce-wraith-.jpg"),
-               new Category("Muscle", 5, ""),
-               new Category ("Airplane", 6, ""),
-               new Category("Bus", 7, "")
+               new Category("Electric", 1, ""),
+               new Category("Luxury", 2, ""),
+               new Category("Exotic", 3, ""),
+               new Category("Muscle", 4, ""),
+               new Category ("Airplane", 5, ""),
+               new Category ("",6,""),
+               new Category("",7,""), 
+               new Category ("",8,""),
+               new Category("Bus", 9, ""),
+               new Category("Truck", 10, "")
+
                );
         }
-        public DbSet<CarReview.Models.Category> Category_1 { get; set; }
+        //public DbSet<CarReview.Models.Category> Category_1 { get; set; }
     }
 }

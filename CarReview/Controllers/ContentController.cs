@@ -16,13 +16,31 @@ namespace CarContent.Controllers
         {
             this.contentRepo = contentRepo;
         }
-
+        
         public ViewResult Index()
         {
             //CarRepository carRepo = new CarRepository();
             var model = contentRepo.GetAll();
             return View(model);
         }
+
+        //public ActionResult Index()
+        //{
+        //    List<Category> ListCategories = new List<Category>()
+        //    {
+        //        new Category() { CategoryId =1, CategoryName=""},
+        //        new Category() { CategoryId =2, CategoryName=""},
+        //        new Category() { CategoryId =3, CategoryName=""},
+        //        new Category() { CategoryId =4, CategoryName=""},
+        //        new Category() { CategoryId =5, CategoryName=""},
+        //        new Category() { CategoryId =6, CategoryName=""},
+        //        new Category() { CategoryId =7, CategoryName=""},
+        //        new Category() { CategoryId =8, CategoryName=""},
+        //        new Category() { CategoryId =9, CategoryName=""}
+        //    };
+        //    ViewBag.Category = new SelectList(ListCategories, "CategpryId", "CategoryName");
+        //        return View();
+        //}
 
         public ViewResult Details(int id)
         {

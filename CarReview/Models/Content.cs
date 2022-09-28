@@ -15,6 +15,7 @@ namespace CarReview.Models
         public DateTime PublishDate { get; set; }
 
         public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
         public virtual Category Category { get; set; }
 
         public Content()
@@ -22,13 +23,14 @@ namespace CarReview.Models
 
         }
 
-        public Content(string title, int id, string body, string author, int categoryId)
+        public Content(string title, int id, string body, string author, int categoryId, string categoryName)
         {
             Title = title;
             Id = id;
             Body = body;
             Author = author;
             CategoryId = categoryId;
+            CategoryName = categoryName;
             PublishDate = DateTime.Now;
         }
     }

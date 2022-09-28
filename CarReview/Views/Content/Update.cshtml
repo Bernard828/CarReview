@@ -1,4 +1,5 @@
 ﻿@model CarReview.Models.Content
+
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -6,7 +7,7 @@
 }
 <link rel="stylesheet" type="text/css" href="~/CSS/StyleSheet.css" />
 
-<h1 class="update-title">Update</h1>
+<h1 class="update-title">Update @Model.Author 's Review</h1>
 
 
 <div class="update-content">
@@ -30,29 +31,27 @@
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
-            <!--<div class="form-group">
-                <label type="hidden" asp-for="PublishDate" class="control-label"></label>-->
-                @*<input asp-for="PublishDate" class="form-control" />*@
-                <!--<span asp-validation-for="PublishDate" class="text-danger"></span>
-            </div>-->
            
-            
-    @*      ADD IN DROPDOWN SELECT FOR THE CATEGORY
-        
-        
-        <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="CategoryId" class="form-control" />
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>*@
+                  ADD IN DROPDOWN SELECT FOR THE CATEGORY
+
+
+
+                <div class="form-group">
+                        <label asp-for="Category" class="control-label"></label>
+                        <input asp-for="CategoryName" class="form-control" />
+                        <span asp-validation-for="CategoryName" class="text-danger"></span>
+                    </div>
+          
+
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 </div>
 
 

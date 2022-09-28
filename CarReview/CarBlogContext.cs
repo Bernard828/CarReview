@@ -25,13 +25,13 @@ namespace CarReview.Views
         {
             modelbuilder.Entity<Content>().HasData(
 
-               new Content("New Car", 1, "My new car is amazing", "Steve Jobs", 1),
-               new Content("New Car", 2, "The candy apple red looks great in the summer.", "Steve Madden", 1),
-               new Content("Used Car", 3, "My used car sucks", "Elon Musk", 2),
-               new Content("Certfied Preowned", 4, "Not a good good", "Stradman", 3),
-               new Content("Certfied Preowned", 7, "Not a good good", "Mr. Bloomberg", 3),
-               new Content("Salvage Title", 5, "Great project car", "DoctaM3", 4),
-               new Content("Lease", 6, "Great project car", "Dr. Jay", 4)
+               new Content("New Car", 1, "My new car is amazing", "Steve Jobs", 1,""),
+               new Content("New Car", 2, "The candy apple red looks great in the summer.", "Steve Madden", 1,""),
+               new Content("Used Car", 3, "My used car sucks", "Elon Musk", 2,""),
+               new Content("Certfied Preowned", 4, "Not a good good", "Stradman", 3,""),
+               new Content("Certfied Preowned", 7, "Not a good good", "Mr. Bloomberg", 3,""),
+               new Content("Salvage Title", 5, "Great project car", "DoctaM3", 4,""),
+               new Content("Lease", 6, "Great project car", "Dr. Jay", 4,"")
                );
 
             modelbuilder.Entity<Category>().HasData(

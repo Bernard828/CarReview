@@ -31,7 +31,7 @@ namespace CarReview.Migrations
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("CategoryImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryId");
@@ -43,43 +43,43 @@ namespace CarReview.Migrations
                         {
                             CategoryId = 1,
                             CategoryName = "Electric",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 2,
                             CategoryName = "Luxury",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 3,
                             CategoryName = "Exotic",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 4,
                             CategoryName = "Sport",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 5,
                             CategoryName = "Muscle",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 6,
                             CategoryName = "Airplane",
-                            Image = ""
+                            CategoryImage = ""
                         },
                         new
                         {
                             CategoryId = 7,
                             CategoryName = "Bus",
-                            Image = ""
+                            CategoryImage = ""
                         });
                 });
 

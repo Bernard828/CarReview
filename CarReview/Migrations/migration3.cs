@@ -24,7 +24,7 @@ namespace CarReview.Migrations
                 newName: "Categories");
 
             migrationBuilder.AddColumn<string>(
-                name: "Image",
+                name: "CategoryImage",
                 table: "Categories",
                 nullable: true);
 
@@ -37,47 +37,47 @@ namespace CarReview.Migrations
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 1,
-                column: "Image",
+                column: "CategoryImage",
                 value: "");
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 2,
-                column: "Image",
+                column: "CategoryImage",
                 value: "");
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 3,
-                column: "Image",
+                column: "CategoryImage",
                 value: "");
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 4,
-                columns: new[] { "CategoryName", "Image" },
+                columns: new[] { "CategoryName", "CategoryImage" },
                 values: new object[] { "Sport", "" });
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 5,
-                columns: new[] { "CategoryName", "Image" },
+                columns: new[] { "CategoryName", "CategoryImage" },
                 values: new object[] { "Muscle", "" });
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "CategoryId",
                 keyValue: 6,
-                columns: new[] { "CategoryName", "Image" },
+                columns: new[] { "CategoryName", "CategoryImage" },
                 values: new object[] { "Airplane", "" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
-                columns: new[] { "CategoryId", "CategoryName", "Image" },
+                columns: new[] { "CategoryId", "CategoryName", "CategoryImage" },
                 values: new object[] { 7, "Bus", "" });
 
             migrationBuilder.UpdateData(
@@ -154,7 +154,7 @@ namespace CarReview.Migrations
                 keyValue: 7);
 
             migrationBuilder.DropColumn(
-                name: "Image",
+                name: "CategoryImage",
                 table: "Categories");
 
             migrationBuilder.RenameTable(

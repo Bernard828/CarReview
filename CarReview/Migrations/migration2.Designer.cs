@@ -31,7 +31,7 @@ namespace CarReview.Migrations
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("CategoryImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryId");
@@ -43,25 +43,25 @@ namespace CarReview.Migrations
                         {
                             CategoryId = 1,
                             CategoryName = "Electric",
-                            Image = "C8 Chevy Corvette Stingray.jpg"
+                            CategoryImage = "C8 Chevy Corvette Stingray.jpg"
                         },
                         new
                         {
                             CategoryId = 2,
                             CategoryName = "Luxury",
-                            Image = "C8 Chevy Corvette Stingray.jpg"
+                            CategoryImage = "C8 Chevy Corvette Stingray.jpg"
                         },
                         new
                         {
                             CategoryId = 3,
                             CategoryName = "Exotic",
-                            Image = "C8 Chevy Corvette Stingray.jpg"
+                            CategoryImage = "C8 Chevy Corvette Stingray.jpg"
                         },
                         new
                         {
                             CategoryId = 4,
                             CategoryName = "Sport",
-                            Image = "C8 Chevy Corvette Stingray.jpg"
+                            CategoryImage = "C8 Chevy Corvette Stingray.jpg"
                         });
                 });
 

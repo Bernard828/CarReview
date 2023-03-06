@@ -11,9 +11,8 @@ namespace CarReview.Models
         public int Id { get; set; }
         public string Body { get; set; }
         public string Author { get; set; }
-        //public string Category { get; set; }
         public DateTime PublishDate { get; set; }
-
+        public string CategoryImage { get; set; }
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public virtual Category Category { get; set; }

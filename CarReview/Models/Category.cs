@@ -11,7 +11,7 @@ namespace CarReview.Models
 
         public int CategoryId { get; set; }
 
-        public string Image { get; set; }
+        public string CategoryImage { get; set; }
 
         public virtual ICollection<Content> Contents { get; set; }
 
@@ -24,7 +24,7 @@ namespace CarReview.Models
         {
             CategoryName = categoryName;
             CategoryId = categoryId;
-            Image = image;
+            CategoryImage = image;
         }
     }
 }

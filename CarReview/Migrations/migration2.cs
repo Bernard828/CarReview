@@ -8,7 +8,7 @@ namespace CarReview.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Image",
+                name: "CategoryImage",
                 table: "Category",
                 nullable: true);
 
@@ -16,28 +16,28 @@ namespace CarReview.Migrations
                 table: "Category",
                 keyColumn: "CategoryId",
                 keyValue: 1,
-                column: "Image",
+                column: "CategoryImage",
                 value: "C8 Chevy Corvette Stingray.jpg");
 
             migrationBuilder.UpdateData(
                 table: "Category",
                 keyColumn: "CategoryId",
                 keyValue: 2,
-                column: "Image",
+                column: "CategoryImage",
                 value: "C8 Chevy Corvette Stingray.jpg");
 
             migrationBuilder.UpdateData(
                 table: "Category",
                 keyColumn: "CategoryId",
                 keyValue: 3,
-                column: "Image",
+                column: "CategoryImage",
                 value: "C8 Chevy Corvette Stingray.jpg");
 
             migrationBuilder.UpdateData(
                 table: "Category",
                 keyColumn: "CategoryId",
                 keyValue: 4,
-                column: "Image",
+                column: "CategoryImage",
                 value: "C8 Chevy Corvette Stingray.jpg");
 
             migrationBuilder.UpdateData(
@@ -93,7 +93,7 @@ namespace CarReview.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Image",
+                name: "CategoryImage",
                 table: "Category");
 
             migrationBuilder.UpdateData(
